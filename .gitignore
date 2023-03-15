@@ -152,3 +152,4 @@
 .metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/xhr.js
 .metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat
 *.ini
+/.metadata/
