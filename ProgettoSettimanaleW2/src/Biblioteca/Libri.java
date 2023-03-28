@@ -30,6 +30,14 @@ public class Libri extends Catalogo {
 		public void setGenere(String genere) {
 			this.genere = genere;
 		}
+		
+		public String getTitolo() {
+			return titolo;
+		}
+
+		public void setTitolo(String titolo) {
+			this.titolo = titolo;
+		}
 
 		public String toString() {
 			String res= "\nLook:";
@@ -51,6 +59,12 @@ public class Libri extends Catalogo {
 		        System.out.println("Inserisci titolo del libro");
 		        String titolo = scanner.nextLine();
 		        
+		        System.out.println(" Inserisci il nome dell'autore");
+		        String autore = scanner.nextLine();
+		        
+		        System.out.println("Inserisci il genere del libro");
+		        String genere = scanner.nextLine();
+		     
 		        System.out.println(" Inserisci anno di pubblicazione");
 		        int year = scanner.nextInt();
 		        
@@ -58,11 +72,6 @@ public class Libri extends Catalogo {
 		        int pages = scanner.nextShort();
 		        scanner.nextLine();
 		        
-		        System.out.println(" Inserisci il nome dell'autore");
-		        String autore = scanner.nextLine();
-		        
-		        System.out.println("Inserisci il genere del libro");
-		        String genere = scanner.nextLine();
 		        
 		        System.out.println(" Libro aggiunto con successo");
 		       
