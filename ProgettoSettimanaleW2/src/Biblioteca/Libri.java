@@ -1,12 +1,10 @@
 package Biblioteca;
 
-import java.util.Scanner;
-
 public class Libri extends Catalogo {
 
 		private String autore;
 		private String genere;
-		private String titolo;
+	
 
 		
 		public Libri(int isbn, String titolo, int year, int pages, String autore, String genere) throws Exception {
@@ -31,19 +29,16 @@ public class Libri extends Catalogo {
 			this.genere = genere;
 		}
 		
-		public String getTitolo() {
-			return titolo;
-		}
-
-		public void setTitolo(String titolo) {
-			this.titolo = titolo;
-		}
+	
 
 		public String toString() {
-			String res= "\nLook:";
-			res += "\n Titolo: " + this.getTitolo();
+			String res= "\nLibro:";
+			res += "\n Titolo: " + super.getTitolo();
 			res += "\n Autore: " + this.getAutore();
-			res += "\n Year: " + this.getYear();
+			res += "\n Genere: " + this.getGenere();
+			res += "\n Numero Pagine: " + super.getNumberOfPage();
+			res += "\n Year: " + super.getYear();
+			res += "\n ISBN: " + super.getISBN();
 			res += "\n";
 			return res;
 		}
@@ -59,12 +54,6 @@ public class Libri extends Catalogo {
 		        System.out.println("Inserisci titolo del libro");
 		        String titolo = scanner.nextLine();
 		        
-		        System.out.println(" Inserisci il nome dell'autore");
-		        String autore = scanner.nextLine();
-		        
-		        System.out.println("Inserisci il genere del libro");
-		        String genere = scanner.nextLine();
-		     
 		        System.out.println(" Inserisci anno di pubblicazione");
 		        int year = scanner.nextInt();
 		        
@@ -72,11 +61,18 @@ public class Libri extends Catalogo {
 		        int pages = scanner.nextShort();
 		        scanner.nextLine();
 		        
+		        System.out.println(" Inserisci il nome dell'autore");
+		        String autore = scanner.nextLine();
+		        
+		        System.out.println("Inserisci il genere del libro");
+		        String genere = scanner.next();
+		     
+		        
 		        
 		        System.out.println(" Libro aggiunto con successo");
 		       
-		        
-		          return new Libri( isbn,  titolo, year, pages, autore, genere);
+		      
+		          return new Libri( isbn, titolo, year, pages, autore, genere);
 		        
 		        }
 		  }

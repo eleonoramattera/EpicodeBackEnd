@@ -58,3 +58,6 @@ public class MainTryCatch {
 	
 
 }
+
+
+<property name="hibernate.hbm2ddl.auto" value="update" />

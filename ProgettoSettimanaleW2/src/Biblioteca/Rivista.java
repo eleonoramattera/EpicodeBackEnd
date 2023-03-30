@@ -1,6 +1,6 @@
 package Biblioteca;
 
-	
+
 	public class Rivista extends Catalogo {
 	    private PeriodicitàRiviste periodicità;
 	    
@@ -72,4 +72,5 @@ package Biblioteca;
 	       
 	        
 	    }
+	}
 
